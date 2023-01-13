@@ -77,7 +77,7 @@ def main(in_path, out_path):
                         i += 1
                 else:
                     path_pref = f"{dataset_path}{trajectory_prefix}-{date}-{time}"
-                    outpath = f"{export_path}processed\{trajectory_prefix}-{date}-{time}"
+                    outpath = f"{export_path}{trajectory_prefix}-{date}-{time}"
 
                     video_paths.append(f"{path_pref}.mp4")
                     json_paths.append(f"{path_pref}.jsonl")
