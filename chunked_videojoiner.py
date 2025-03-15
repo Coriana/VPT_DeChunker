@@ -18,7 +18,11 @@ MINEREC_ORIGINAL_HEIGHT_PX = 720
 
 
         
-def main(in_path, out_path):
+def main(in_path: str, out_path: str):
+    """
+    Takes in a folder of MineRL videos and their corresponding label files, and processes them into a single video and label file
+    by concatenating the videos and adding the mouse cursor to the video frames.
+    """
     dataset_path = in_path
     export_path = out_path
     task_id = 0
@@ -149,7 +153,9 @@ def main(in_path, out_path):
                 video.release()
             samples_processed += 1
 
-        vidoutput.release
+        vidoutput.release()
+        jsonl_out.close()
+        print(f"Processed {samples_processed} samples")
        # continue
     
     
